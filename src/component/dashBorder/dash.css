@@ -1,0 +1,122 @@
+.container {
+	position: absolute;
+	width: 200px;
+	height: 150px;
+	left: 0;
+	bottom: 0px;
+	user-select: none;
+	background: url("../../assets/dashBoardBorder.png") no-repeat;
+	background-size: 200px 200px ;
+	z-index: 999;
+}
+.output {
+	line-height: 35px;
+	width: 60px;
+	height: 30px;
+	background-color: #4169E1;
+	color: #ddd;
+	border-radius: 60px 60px 0 0;
+	position: absolute;
+	top: 135px;
+	left: 135px;
+	text-align: center;
+}
+
+.initialValue {
+	border: none;
+	border-bottom: 1px solid #84CEFF;
+	color: #84CEFF;
+	display: block;
+	width: 3em;
+	background-color: transparent;
+	margin: 1em auto;
+	outline: none;
+	font-size: 16px;
+	text-align: center;
+	/*SVG*/
+}
+
+svg {
+	margin: 0px;
+	padding: 0;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+}
+
+
+.outline,
+.fill,
+.center,
+.needle,
+.scale,
+.output {
+	pointer-events: none;
+}
+
+.outline {
+	fill: #323b88	;
+}
+
+.fill {
+	fill: #00BFFF;
+}
+
+.needle {
+	fill: cyan;
+}
+
+.scale {
+	stroke: #aaa;
+}
+
+text {
+	text-anchor: middle;
+	dominant-baseline: alphabetic;
+	font: 12px verdana, sans-serif;
+	fill: #aaa;
+}
+.speed{
+	font-weight: bold;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	position: absolute;
+	top: 35px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.time{
+	color: #3B9CEC;
+	font-size: 18px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 45px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.time p {
+	margin: 0;
+	line-height: 20px;
+	text-align: center;
+}
+.btns{
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	z-index: 6000;
+}
+.btns img{
+	cursor: pointer;
+}
+

@@ -1,0 +1,404 @@
+*{
+    box-sizing: border-box;
+    font-family: "Noto Sans SC";
+}
+.layouts{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 5%;
+    background: url('../assets/title1.png') no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title span{
+   font-size: 26px; 
+}
+.scene{
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+}
+.box{
+    width: 400px;
+    /* position: absolute;
+    left: 20px;
+    top: 5%;
+    z-index: 999; */
+    float: left;
+}
+.warningList{
+    width: 1200px;
+    height: 75%;
+    max-height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgb(29, 193, 245,.1);
+    float: left;
+    color: #7dbfeb;
+    text-align: center;
+    display: flex;
+    z-index: 999;
+    flex-direction: column;
+    transition: 0.5s;
+    border: 1px solid #1DC1F5;
+}
+.warningList tr th:nth-last-child(1){
+    display: none;
+}
+.warningList h2{
+    font-size: 26px;
+    color: #fff;
+    height: 40px;
+}
+.warningList p{
+    font-size: 22px;
+    height: 35px;
+    padding: 5px 0;
+    margin: 0;
+    
+    box-sizing: content-box;
+    background-color: rgb(29, 193, 245,.1);
+
+}
+
+.warningList td,.recommend td ,.allRecommend td{
+    padding : 10px 0px!important;
+    border-bottom:1px solid rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+.warningList th,.recommend tr th,.allRecommend tr th{
+    background: transparent!important;
+}
+.warningList tr{
+    padding: 0 10px;
+    width: 90%;
+}
+
+
+.layouts th span{
+    margin:  0 auto;
+    display: block;
+    text-align: center;
+    color: #1DC1F5;
+    font-weight: bold;
+}
+.hide{
+    display: none;
+}
+
+.warningListSwitch{
+    width: 22px;
+    height: 100px;
+    position: absolute;
+    right: -22px;
+    top: -1px;
+    margin: auto;
+    background-color: rgb(24,38,53);
+    border: 1px solid #1DC1F5;
+    border-radius:  0 4px 4px 0;
+    visibility: hidden;
+    animation: show 0.5s forwards;
+    cursor: pointer;
+    color: #1DC1F5;
+    line-height: 20px;
+}
+.warningListSwitch img{
+    width: 15px;
+    height: 15px;
+    display: block;
+    padding-top: 5px;
+    margin: auto;
+}
+@keyframes show{
+    0%{
+        visibility: hidden;
+    }
+    99%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+.none{
+    display: none;
+}
+
+
+.trackControl{
+    width: 0;
+    height: 100%;
+    float: right;
+    background-color: rgb(24,38,53);
+    transition: 0.2s;
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: none;
+}
+.ctrlVisible{
+    width: 300px;
+}
+.trackControl .back{
+    position: relative;
+    top: 50px;
+    left: -60px;
+    outline: 0;
+    border: 0;
+    font-size: 10px;
+    color: #333;
+    border: 1px solid #ccc;
+    width: 30px;
+    text-align: center;
+    padding: 2px 0;
+    border-radius: 4px;
+    border-right: 0;
+    cursor: pointer;
+}
+.warningList .tablebox{
+    width: 100%;
+    /* height: 800px; */
+    margin: auto;
+    overflow-y: auto;
+    flex: 1;
+
+}
+.warningList .tablebox td {
+    white-space:nowrap;
+    /* width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: block; */
+}
+.warningList table tbody{
+    overflow-y: auto;
+    flex: 1;
+}
+
+
+.trackControl table{
+    color: #fff;
+    width: 100%;
+}
+.trackControl table tr{
+    display: block;
+    width: 100%;
+}
+.trackControl table td{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+}
+.change{
+    position: absolute;
+    top: 50px;
+    left: 25%;
+}
+
+
+.targetInfo{
+    width: 300px;
+    height: 400px;
+    padding: 20px 30px;
+    position: absolute;
+    background-color: rgb(14, 159, 193 ,.3);
+    color: #00FEFE;
+    top: 100px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+}
+.infoForm{
+    flex: 1;
+}
+.targetInfo .infoForm div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    float: left;
+}
+.targetInfo .infoForm div:nth-child(1){
+    width: 40%;
+}
+.targetInfo .infoForm div:nth-child(2){
+    width: 60%;
+}
+.targetInfo .options{
+    width: 100%;
+    height: 72px;
+}
+.targetInfo .options div{
+    width: 100%;
+    height: 36px;
+}
+.targetInfo .infoForm{
+
+}
+.line{
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+    background: #0E9FC1;
+}
+
+
+
+
+.recommend {
+    width: 620px;
+    height: 700px;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    border-bottom: none;
+}
+.recommend .recommendTable{
+    background-color: rgb(29, 193, 245,.1);
+    border: 1px solid #1DC1F5;
+    border-radius: 5px;
+    height: 650px;
+}
+.recommend tr td:nth-child(1) span{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.layouts th{
+    border-right: unset;
+}
+.moreRecommend{
+    text-align: center;
+    color: #1DC1F5;
+    font-weight: bold;
+}
+.moreRecommend span{
+    cursor: pointer;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+
+.allRecommend{
+    width: 620px;
+    height: 525px;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    margin: auto;
+    background-color: rgb(29, 193, 245,.1);
+    border: 1px solid #1DC1F5;
+
+    border-radius: 5px;
+}
+.tableCtrl{
+    width: 100%;
+    height: 25px;
+    background: rgb(29, 193, 245,.1);
+    color: #fff;
+}
+.tableCtrl span{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color:transparent   /*滚动条背景色*/
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7ACAEC;  /*滚动条颜色*/
+}
+
+.tableHeadInfo{
+    width: 100%;
+    height: 50px;
+    color: #1DC1F5;
+    padding: 5px 0;
+    box-sizing: content-box;
+}
+.tableHeadInfo span{
+    padding: 4px 10px;
+}
+
+
+.layouts tr th{
+    padding: 10px 5px!important;
+    color: #7dbfeb;
+    border-bottom: 1px solid #1DC1F5!important;
+    border-right: unset!important;
+}
+
+
+
+.layouts td{
+    color: #7dbfeb;
+    line-height: 20px;
+}
+.warningList .ant-table-body{
+    padding: 0 20px;
+}
+
+
+.ctrls{
+    z-index: 999;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ctrls div{
+    float: left;
+    width: 36px;
+    height: 36px;
+    z-index: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(17, 199, 241,.8);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    user-select: none;
+}
+.ctrls div img{
+    width: 15px;
+    height: 15px;
+    color: #fff;
+}
+.recommend tr th,.allRecommend tr th{
+    padding: 4px 0!important;
+}
